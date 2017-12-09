@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Super Smash RPG</title>
+    <!-- Google Font Oswald -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <script src="assets/javascript/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+
+    <script src="assets/javascript/game.js"></script>
+</head>
+
+<body>
+    <div class="container.fluid">
+        <div id="header" class="row text-center">
+            <h1>O Super Smash RPG O</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div id="char-select" class="row">
+            <div class="col-md-12">
+                <div id="char-text" class="row">
+                    <h2>Choose Your Fighter</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="character" class="row" id="mario" base-attack="8" counter-attack="15">
+                    <p class="name" id="mario-name">Mario</p>
+                    <p class="hp">HP:
+                        <span class="hp-number">100</span>
+                    </p>
+                </div>
+                <div class="character" id="link" base-attack="7" counter-attack="20">
+                    <p class="name" id="link-name">Link</p>
+                    <p class="hp">HP:
+                        <span class="hp-number">130</span>
+                    </p>
+                </div>
+                <div class="character" id="rob" base-attack="15" counter-attack="30">
+                    <p class="name" id="rob-name">R.O.B.</p>
+                    <p class="hp">HP:
+                        <span class="hp-number">75</span>
+                    </p>
+                </div>
+                <div class="character" id="pikachu" base-attack="4" counter-attack="11">
+                    <p class="name" id="pikachu-name">Pikachu</p>
+                    <p class="hp">HP:
+                        <span class="hp-number">80</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="battlefield" class="row">
+            <div id="player" class="col-md-4">
+                    
+            </div>
+            <div id="fight-holder" class="col-md-4"><br><br><br><br>
+                <button id="fight-button" class="btn btn-lg btn-success show">
+                    <img src="assets/images/fighticon.png" width="32"> Fight!
+                    <img src="assets/images/fighticon.png" width="32">
+                </button>
+            </div>
+            <div id="opponent" class="col-md-4">
+                    
+            </div>
+        </div>
+        <div id="defeated-enemies" class="row">
+            <h2>Enemies Defeated</h2>
+            <div id="defeated-portrait">
+                    
+            </div>
+        </div>
+        <div id="endgame" class="row text-center hide">
+            <h3 id="endgame-message">You have been defeated.</h3>
+            <div id="player-portrait-win"></div>
+            <div id="player-portrait-loss"></div>
+            <button id="new-battle" class="btn btn-lg btn-primary">Battle Again!</button>
+        </div>
+    </div>
+</body>
+
+</html>

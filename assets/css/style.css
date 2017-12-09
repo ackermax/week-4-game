@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "Super Smash Font";
+    src: url(../fonts/super_smash_font.ttf);
+}
+@font-face {
+    font-family: "Character Select";
+    src: url(../fonts/charselect.ttf);
+}
+.hide {
+    visibility: hidden;
+    position: absolute;
+    top: -9999px;
+}
+.show {
+    visibility: visible;
+    position: static;
+}
+#header {
+    font-family: "Super Smash Font";
+    color: white;
+    background-color: rgb(77, 1, 77);
+    border-bottom: 5px solid rgb(37, 0, 37);
+}
+body {
+    background-image: url(../images/gaming-pattern.png);
+}
+.character {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 25px;
+    background-color: gray;
+    background-size: 150px;
+    color: white;
+    position: relative;
+}
+#char-select {
+    background: none;
+}
+#mario {
+    background-image: url(../images/mario.png);
+}
+#link {
+    background-image: url(../images/link.png);
+}
+#rob {
+    background-image: url(../images/rob.png);
+}
+#pikachu {
+    background-image: url(../images/pikachu.png);
+}
+#player .character {
+    background-color: rgb(0, 0, 219);
+}
+#opponent .character {
+    background-color: red;
+}
+.name {
+font-family: "Character Select";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 28px;
+padding-left: 10px;
+margin-bottom: 0;
+font-size: 16px;
+}
+
+#mario-name {
+    background-color: darkred;
+    border-top: 1.5px solid rgb(255, 114, 114);
+}
+
+#link-name {
+    background-color: darkgreen;
+    border-top: 1.5px solid rgb(81, 255, 81);
+}
+#rob-name {
+    background-color: darkblue;
+    border-top: 1.5px solid rgb(88, 88, 255);    
+}
+#pikachu-name {
+    background-color: rgb(167, 167, 0);
+    border-top: 1.5px solid rgb(248, 248, 69);
+}
+
+.hp {
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    top: 0;
+    right: 3px;
+}
+#defeated-portrait .character {
+    background-color: black;
+}
+
+#player-portrait-win .character {
+    background-color: green;
+}
+#player-portrait-loss .character {
+    background-color: black;
+}
