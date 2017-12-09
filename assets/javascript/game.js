@@ -45,7 +45,7 @@ $(document).ready(function () {
             totalAttack += baseAttack;
             enemyHP -= totalAttack;
             $("#opponent").find(".hp-number").text(enemyHP);
-            $("#player-attack").text("You hit your opponent for " + totalAttack + " damage!")
+            $("#player-attack").text($("#player").find(".name").text() + " hits " + $("#opponent").find(".name").text() +" for " + totalAttack + " damage!")
             $("#player-attack").removeClass("hide");
             if (enemyHP <= 0) {
                 $("#opponent").find(".hp-number").text("0");
@@ -55,8 +55,8 @@ $(document).ready(function () {
                 enemiesDefeated++;
                 $("#char-text").text("Choose Your Opponent");
                 if (enemiesDefeated == 3) {
+                    $("#endgame-message").text($("#player").find(".name").text() + " has destroyed their enemies and prevailed. Congratulations!");
                     $("#player").children(".character").appendTo("#player-portrait-win");
-                    $("#endgame-message").text("You have destroyed your enemies and prevailed. Congratulations!")
                     $("#battlefield").addClass("hide");
                     $("#endgame").removeClass("hide");
                     return gameStep = 4;
@@ -68,12 +68,12 @@ $(document).ready(function () {
             }
             playerHP -= counterAttack;
             $("#player").find(".hp-number").text(playerHP);
-            $("#enemy-attack").text("Your opponent hit you back for " + counterAttack + " damage!")
+            $("#enemy-attack").text($("#opponent").find(".name").text() +" hits " + $("#player").find(".name").text() + " back for " + counterAttack + " damage!")
             $("#enemy-attack").removeClass("hide");
             if (playerHP <= 0) {
+                $("#endgame-message").text($("#player").find(".name").text() + " has been destroyed.");
                 $("#player").find(".hp-number").text("0");
                 $("#player").children(".character").appendTo("#player-portrait-loss");
-                $("#endgame-message").text("You have been destroyed.")
                 $("#battlefield").addClass("hide");
                 $("#endgame").removeClass("hide");
                 $("#char-select").addClass("hide");
