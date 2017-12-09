@@ -35,60 +35,59 @@
     </div>
     <div class="container">
         <div id="char-select" class="row">
-            <div class="col-md-12">
-                <div id="char-text" class="row">
-                    <h2>Choose Your Fighter</h2>
-                </div>
-            </div>
+            <h2 id="char-text">Choose Your Fighter</h2>
 
-            <div class="row">
-                <div class="character" class="row" id="mario" base-attack="8" counter-attack="15">
-                    <p class="name" id="mario-name">Mario</p>
-                    <p class="hp">HP:
-                        <span class="hp-number">100</span>
-                    </p>
-                </div>
-                <div class="character" id="link" base-attack="7" counter-attack="20">
-                    <p class="name" id="link-name">Link</p>
-                    <p class="hp">HP:
-                        <span class="hp-number">130</span>
-                    </p>
-                </div>
-                <div class="character" id="rob" base-attack="15" counter-attack="30">
-                    <p class="name" id="rob-name">R.O.B.</p>
-                    <p class="hp">HP:
-                        <span class="hp-number">75</span>
-                    </p>
-                </div>
-                <div class="character" id="pikachu" base-attack="4" counter-attack="11">
-                    <p class="name" id="pikachu-name">Pikachu</p>
-                    <p class="hp">HP:
-                        <span class="hp-number">80</span>
-                    </p>
-                </div>
+            <div class="character" id="mario" hp="100" base-attack="9" counter-attack="15">
+                <p class="name" id="mario-name">Mario</p>
+                <p class="hp">HP:
+                    <span class="hp-number">100</span>
+                </p>
+            </div>
+            <div class="character" id="link" base-attack="7" hp="130" counter-attack="20">
+                <p class="name" id="link-name">Link</p>
+                <p class="hp">HP:
+                    <span class="hp-number">130</span>
+                </p>
+            </div>
+            <div class="character" id="rob" base-attack="15" hp="75" counter-attack="30">
+                <p class="name" id="rob-name">R.O.B.</p>
+                <p class="hp">HP:
+                    <span class="hp-number">75</span>
+                </p>
+            </div>
+            <div class="character" id="pikachu" base-attack="17" hp="80" counter-attack="11">
+                <p class="name" id="pikachu-name">Pikachu</p>
+                <p class="hp">HP:
+                    <span class="hp-number">80</span>
+                </p>
             </div>
         </div>
+
         <div id="battlefield" class="row">
             <div id="player" class="col-md-4">
-                    
+                <div class="alert alert-success hide text-center" id="player-attack" role="alert"></div>
             </div>
-            <div id="fight-holder" class="col-md-4"><br><br><br><br>
-                <button id="fight-button" class="btn btn-lg btn-success show">
+            <div id="fight-holder" class="col-md-4 hide">
+                <br>
+                <br>
+                <br>
+                <br>
+                <button id="fight-button" class="btn btn-lg btn-success">
                     <img src="assets/images/fighticon.png" width="32"> Fight!
                     <img src="assets/images/fighticon.png" width="32">
                 </button>
             </div>
             <div id="opponent" class="col-md-4">
-                    
+                <div class="alert alert-danger hide text-center" id="enemy-attack" role="alert"></div>
             </div>
         </div>
-        <div id="defeated-enemies" class="row">
+        <div id="defeated-enemies" class="row hide">
             <h2>Enemies Defeated</h2>
             <div id="defeated-portrait">
-                    
+
             </div>
         </div>
-        <div id="endgame" class="row text-center hide">
+        <div id="endgame" class="row hide text-center">
             <h3 id="endgame-message">You have been defeated.</h3>
             <div id="player-portrait-win"></div>
             <div id="player-portrait-loss"></div>

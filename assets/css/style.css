@@ -101,3 +101,9 @@ font-size: 16px;
 #player-portrait-loss .character {
     background-color: black;
 }
+#player-portrait-win .character .name {
+    text-align: left;
+}
+#player-portrait-loss .character .name {
+    text-align: left;
+}
